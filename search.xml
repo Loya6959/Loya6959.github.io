@@ -27,19 +27,6 @@
     </entry>
     
     
-    
-    <entry>
-      <title>Hello World（无聊做了下汉化）</title>
-      <link href="/2023/12/31/hello-world/"/>
-      <url>/2023/12/31/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>欢迎使用<a href="https://hexo.io/">Hexo</a>！这是你的第一篇博客小子！ 点击<a href="https://hexo.io/docs/">文档</a>查看更多信息！如果你在使用Hexo的过程中遇到任何问题，请访问<a href="https://hexo.io/docs/troubleshooting.html">故障排除</a>找到答案，或者你也可以在我们的<a href="https://github.com/hexojs/hexo/issues">GitHub</a>存储库上询问我们。</p><h2 id="赶快开始吧！"><a href="#赶快开始吧！" class="headerlink" title="赶快开始吧！"></a>赶快开始吧！</h2><h3 id="创建新的博客"><a href="#创建新的博客" class="headerlink" title="创建新的博客"></a>创建新的博客</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>更多信息：<a href="https://hexo.io/zh-cn/docs/writing.html">写作 | Hexo</a></p><h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>更多信息 <a href="https://hexo.io/zh-cn/docs/server.html">服务器 | Hexo</a></p><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>更多信息：<a href="https://hexo.io/zh-cn/docs/generating.html">生成文件 | Hexo</a></p><h3 id="部署到你的远程站点"><a href="#部署到你的远程站点" class="headerlink" title="部署到你的远程站点"></a>部署到你的远程站点</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>更多信息：<a href="https://hexo.io/zh-cn/docs/one-command-deployment.html">部署 | Hexo</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
   
   
 </search>
