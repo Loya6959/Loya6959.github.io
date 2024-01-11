@@ -1,320 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>折腾是一种美德（合理合法的情况下）</title>
-    <url>/2023/12/31/%E6%8A%98%E8%85%BE%E4%BA%86%E8%89%AF%E4%B9%85/</url>
-    <content><![CDATA[<h2 id="发生了什么？"><a href="#发生了什么？" class="headerlink" title="发生了什么？"></a>发生了什么？</h2><p>挑好主题，配置hexo，修改config，然后爆炸，天旋地转，人飞起来，任务完成。没错，作为头一次碰博客框架而且懒得折腾的后端程序员，这玩意居然花了我一晚上时间，不过好在，我成了。</p>
-<h2 id="为什么要庆祝这个？"><a href="#为什么要庆祝这个？" class="headerlink" title="为什么要庆祝这个？"></a>为什么要庆祝这个？</h2><p>我觉得，如果有一天你拿了世界冠军什么的，多半也会炫耀，除非……你不是第一次拿到世界冠军。</p>
-<p>对于一个很难完成的任务，如果你完成了，那便是一件值得骄傲的事，如果你失败了，也不必灰心，挑战总会失败，也不差这一次两次了。记录自己的成功，总结自己的失败，总是令人充满信心的，因为这样你才会相信，下一次能做得更好。</p>
-<h2 id="中途遇到了什么问题？"><a href="#中途遇到了什么问题？" class="headerlink" title="中途遇到了什么问题？"></a>中途遇到了什么问题？</h2><p>这可就有点多了，排头的一个问题便是博客框架的选择，虽然我是很快的选择了Hexo这个成熟框架，不过我之前都是拿它当作临时的文档库来用的，你懂的。</p>
-<p>其次的问题就是主题选择，Hexo的主题可谓是琳琅满目，各种风格的博客主题总有你能看上眼的，不过在选择好主题后的事情，就是对你的考验了。</p>
-<p>我的这个博客选用了Butterfly这个框架，看上它的原因也很简单，就是它能配置满屏图背景（在懒得折腾的情况下），而且在网络上，它的反响也不错。不过嘛，有时可能看着越简单越上眼，实际部署可能就越难，当然，这个博客主题配置起来还是蛮简单的，只是我中途有遇到不少问题而已。</p>
-<p>最值得拿出来说说的自然是这个，请看下面的代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;aplayer no-destroy&quot;</span> <span class="attr">data-id</span>=<span class="string">&quot;9001623012&quot;</span> <span class="attr">data-server</span>=<span class="string">&quot;netease&quot;</span> <span class="attr">data-type</span>=<span class="string">&quot;playlist&quot;</span> <span class="attr">data-fixed</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-autoplay</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-theme</span>=<span class="string">&quot;#9B33F0&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这是往页面嵌入音乐（播放列表）的代码，而我当时是想尝试折腾它播放本地音乐的，后来自然是以失败告终了，失败的原因倒也简单，似乎我的测试环境不能很好的读取模板，而这个div我也没查到其引用本地文件的方法。</p>
-<h2 id="期间印象深刻的事情"><a href="#期间印象深刻的事情" class="headerlink" title="期间印象深刻的事情"></a>期间印象深刻的事情</h2><p>这个的话到也是有，比如我为了体验不同的主题反复创建删除博客根目录这件事，配置主题的<code>config</code>是件有点麻烦的事，而我最近由于学校内的作业已经心烦到没耐心了，可能你很好奇我为啥能够在这种情况下耐着性子弄完这个博客，说实话我也很好奇，不过也无所谓了。总之嘛……我觉得体验主题后如果懒得备份<code>config</code>或者懒得把<code>config</code>改回来，直接删除所有文件然后重新创建也是一个不错的方法（不过不推荐这么做就是了）。</p>
-<p>这么一提还有一件事挺让我印象深刻的，就是搭建博客的那一天的晚上，正好是跨年，当我搭建到凌晨时偶然看到手机屏幕，看着刷满屏的“新年快乐”时，我莫名有种一些担子被放下的感觉，于是我也暂时放下了搭建博客的注意力，也开始向一些朋友发新年快乐，我甚至还发了俩红包出去，想想也挺有趣的不是吗。</p>
-<p>最后一个印象深刻的事情……可能就是宿舍停电的事情了，这个直到次日早晨（实际上是中午）才解决的事情，愣是让我吐槽了学校网络拉跨一晚上。不过不得不说，当我自己拿起那个用于恢复供电的奇怪设备，并且真的靠那玩意儿恢复了宿舍供电时，我心里还是挺自豪的，就像我刚刚说的那样——成功的事值得骄傲，当然啊，也不能过度骄傲。</p>
-<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>算是我水的一篇博客这个，不过能水出一千多字也挺厉害的了。除了新年快乐，我还想说的是：</p>
-<hr>
-<p style="color: #9B33F0">相信，不一定会成功，但不相信，一定会失败</p>
-<p style="color: #9B33F0" align="right">——陈墨（恋爱绮谭 不存在的真相）</p>
-
-<hr>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Markdown简单教学</title>
+      <link href="/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/"/>
+      <url>/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>作为一名学习数媒专业的学生，对我来说排版并不算什么难事，但有时我也不想花时间在排版美化上，并且也有很多不是设计类专业的人也需要一个无需过多设计就能达到不错视觉效果，或者说可读性的文档。现在的一个通用解决方式便是Markdown，这个轻量标记语言确实挺好用的，包括这篇博客也是拿它进行攥写的。</p><p>接下来就正式进入内容。（图像内的渲染效果使用的Typora的Github主题进行展示）</p><h2 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h2><p>Markdown的语法整体是比较简单的，如果不算上LaTex这些高级语法的话，学习md（Markdown的缩写）应该花不了多少时间。所以这里就先介绍一些简单的语法吧。</p><p>对了，语法的效果展示使用<a href="https://typoraio.cn/">Typora</a>，这款md编辑器目前是收费的，各位也可以用自己喜欢的编辑器来学习，例如我写博客时就喜欢用<a href="https://code.visualstudio.com/">VSCode</a>。</p><h3 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h3><p>在正式开始语法介绍前，我们得清楚Markdown（之后简称md）的文件类型。Markdown作为一名轻量标记语言，它的文件格式为<code>.md</code>，这个文件本质上就是一个文本文件，因此如果愿意，直接拿<code>.txt</code>编写md也是完全没问题的。</p><p>md的效果渲染主要依靠市面上的各种Markdown编辑器、渲染器完成，因此md在不同渲染器的渲染效果可能会有所不同。</p><h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>md里边最简单的语法实际上是段落，它的写法如下：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">所以，这就是段落。</span><br><span class="line"></span><br><span class="line">Ok，这是另一个段落</span><br></pre></td></tr></table></figure><p>在这篇博客内看到的所有正文（包括这一段），都是使用的相同语法，所以这里我就不放图片展示了。</p><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>一篇文章，一篇博客总是少不了标题的，而在md中，标题的语法非常简单，我们先来看一级标题：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br></pre></td></tr></table></figure><p>那么二级标题、三级标题甚至往后呢？</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="section">###### 六级标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">####### 七级标题（并不支持）</span></span><br></pre></td></tr></table></figure><p><img src="/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/%E6%A0%87%E9%A2%98.png" alt="标题"></p><p>可以发现，<code>#</code>的数量能够决定标题的级数，md支持编写者定义1~6级标题，标题从1级到6级的字体大小逐级递减。一般来说，我们只会用到其中的1~4级标题，但是由于博客的特殊性，一级标题在博客攥写时一般也不使用，因此在博客下常用的就是2~4级标题了。</p><h3 id="图片和链接"><a href="#图片和链接" class="headerlink" title="图片和链接"></a>图片和链接</h3><p>图片和链接虽然二者并不相同，但在md中，它们的语法却颇为相似，我们先来看看二者的语法：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">这是一个链接</span>](<span class="link">https://www.bilibili.com</span>)</span><br><span class="line">![<span class="string">这是一张图像</span>](<span class="link">D:\桌面文件\物理超度.jpg</span>)</span><br></pre></td></tr></table></figure><p><img src="/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/%E5%9B%BE%E5%83%8F%E5%92%8C%E9%93%BE%E6%8E%A5.png" alt="图片和链接"></p><p>可以发现，二者语法只是相差了一个半角叹号<code>!</code>，但是实现的效果却截然不同。当然，这里图片的路径我使用的绝对路径，实际上我们也可以使用相对路径和链接来引用图片。现在，我们假设在桌面的test文件夹下有如下内容:</p><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">/text</span><br><span class="line">    - test.md</span><br><span class="line">    - /img</span><br><span class="line">        test.png</span><br></pre></td></tr></table></figure><p>我们要做的，就是将img下的图像用相对路径和绝对路径两种方式进行引用，然后在网络上随便找个图像链接，作为我们的第三个示例：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">相对路径</span>](<span class="link">./img/test.png</span>)</span><br><span class="line">![<span class="string">绝对路径</span>](<span class="link">C:\Users\ziran6959\Desktop\test\img\test.png</span>)</span><br><span class="line">![<span class="string">网络链接</span>](<span class="link">https://www.bilibili.com/favicon.ico</span>)</span><br></pre></td></tr></table></figure><p><img src="/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F.png" alt="图片的引用方式"></p><p>可以发现，我们先是分别用相对路径和绝对路径引用了同一张图片，然后我们再在网络上找到了B站的Icon链接并进行了引用。在二者语法中<code>[]</code>内都是填写一个任意文本，图片引用语法中，<code>[]</code>内的文本会在图片丢失时显示，而链接语法中的<code>[]</code><br>则是链接的文本。<code>()</code>内的内容都是其引用（指向）的地址，这里的地址都能使用上述提到的三种地址（不过我想应该没多少人会在链接的语法里边使用本地地址吧？）</p><p>此外，二者还可以指定鼠标悬停到其上后的标题文本，就像这样：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">试试悬停？</span>](<span class="link">&quot;&quot; &quot;悬停试试！&quot;</span>)</span><br><span class="line">![<span class="string">试试悬停</span>](<span class="link">&quot;&quot; &quot;悬停试试！&quot;</span>)</span><br></pre></td></tr></table></figure><p>来看看效果（将鼠标放在其上试试，顺带一提，这里顺带展示了图片丢失时图片语法的情况）：<br><a href="https://" title="悬停试试！">试试悬停？</a><br><img src="/%22%22" alt="试试悬停" title="悬停试试！"></p><p>总结起来，它们的语法模板就是这样的：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">TEXT</span>](<span class="link">Link &quot;Title&quot;</span>)</span><br><span class="line">![<span class="string">TEXT</span>](<span class="link">Link &quot;Title&quot;</span>)</span><br></pre></td></tr></table></figure><p>其中：</p><ul><li><code>TEXT</code>：链接的文本，图片的Alt文本</li><li><code>Link</code>：链接或图片的地址（可以是本地绝对路径、相对路径，以及网络链接）</li><li><code>Title</code>：鼠标悬停时显示的标题文本</li></ul><p>不过各位也许有发现，似乎图片的语法并不支持指定图片的尺寸，这可是个头疼的问题，毕竟有时我们可是会引用一些尺寸稍大的文件的。幸运的是，md实际上也能支持一些HTML标签，<code>&lt;img/&gt;</code>就在其支持的范围之内：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;path&quot;</span> <span class="attr">width</span>=<span class="string">&quot;[num][dw]&quot;</span> <span class="attr">height</span>=<span class="string">&quot;[num][dw]&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;text&quot;</span> <span class="attr">title</span>=<span class="string">&quot;text&quot;</span> /&gt;</span></span></span><br></pre></td></tr></table></figure><p>在md中使用<code>&lt;img/&gt;</code>就像在HTML中使用它一样，不过正常情况下并不推荐在md中使用HTML标签就是了。</p><h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>有时，我们需要让阅读者注意到特定的关键词，或者往正文文本中插入单句代码。md贴心的为我们提供了如下的语法：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">*斜体*</span></span><br><span class="line"><span class="strong">**粗体**</span></span><br><span class="line"><span class="strong">**<span class="emphasis">*粗斜体*</span>**</span>（一些md渲染器并不能很好的同时显示粗斜体，也可能是使用的字体的问题）</span><br><span class="line">~~删除线~~</span><br><span class="line"><span class="code">`单句代码`</span></span><br><span class="line">==底部着色==（一些md渲染器并不支持此语法）</span><br></pre></td></tr></table></figure><p><img src="/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/%E5%BC%BA%E8%B0%83.png" alt="强调"></p><p>当然，就像展示的那样，一些md并不能很好的支持<code>==cont==</code>底部着色，还有<code>***cont***</code>粗斜体，因此实际使用这些语法时得了解所使用的md渲染器到底支不支持它们。</p><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>引用一些文献、他人的博客选段总是在所难免的，如果需要让读者清楚某段文本是引用文本，那该怎么办呢？</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用文本</span></span><br></pre></td></tr></table></figure><p>渲染效果如下（不同的md渲染器可能会有所不同，这里我就偷懒用博客自己的渲染方案了）：</p><blockquote><p>引用文本</p></blockquote><p>看着是不是特别醒目？还没完，这个语法可以支持多个段落，甚至还能嵌套：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用文本1</span></span><br><span class="line"><span class="quote">&gt; 引用文本2</span></span><br><span class="line"><span class="quote">&gt; 引用文本3</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; 引用文本1</span></span><br><span class="line"><span class="quote">&gt; &gt; 引用文本2</span></span><br></pre></td></tr></table></figure><blockquote><p>引用文本1<br>引用文本2<br>引用文本3</p></blockquote><blockquote><p>引用文本1</p><blockquote><p>引用文本2</p></blockquote></blockquote><p>当然，引用块多了似乎也不是太好，影响观感不说，要是被认为通篇都是引用，那还不如转载算了对吧。</p><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>列表可是个好东西，能够将散乱的信息进行整合。信息整合总归得区分其是否需要关心顺序逻辑，因此md提供了两种列表的语法：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 无序列表1</span><br><span class="line"><span class="bullet">-</span> 无序列表2</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 有序列表1</span><br><span class="line"><span class="bullet">2.</span> 有序列表2</span><br></pre></td></tr></table></figure><ul><li>无序列表1</li><li>无序列表2</li></ul><ol><li>有序列表1</li><li>有序列表2</li></ol><p>无序列表除了可以使用<code>-</code>开头，用<code>*</code>、<code>+</code>也是没问题的。有序列表以连续的有序列表定义中的第一个的数字开始，例如下面的有序列表中，第一个的序号为2，第二个同样是2：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">2.</span> 有序列表1</span><br><span class="line"><span class="bullet">2.</span> 有序列表2</span><br></pre></td></tr></table></figure><ol start="2"><li>有序列表1</li><li>有序列表2</li></ol><p>可以发现，至少在这篇博客中，序号是从2开始依次增加的，即便我为二者给定的序号都是相同的。不过在实际攥写时，并不推荐如此攥写，渲染器虽然能够帮我们解决问题，但是自己改的时候恐怕会一头雾水。由于md可以使用普通的文本编辑器打开，因此像上面的有序列表写法也会给这类读者造成困扰。</p><p>此外，无序列表、有序列表和引用一样，都能支持嵌套：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">+</span> 一级</span><br><span class="line"><span class="bullet">  +</span> 二级</span><br><span class="line"><span class="bullet">    +</span> 三级</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 一级</span><br><span class="line"><span class="bullet">    1.</span> 二级</span><br></pre></td></tr></table></figure><ul><li>一级<ul><li>二级<ul><li>三级</li></ul></li></ul></li></ul><ol><li>一级<ol><li>二级</li></ol></li></ol><p>可以发现，无序列表在嵌套时，渲染器会为其使用不同的项目符号，并且进行缩进，我这里使用的两个空格缩进（有序列表用的四个空格）。请注意，嵌套时同一级别必须使用相同的缩进量，不然渲染器很可能将不同缩进量的列表当作不同的级别。</p><h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>刚刚其实我们已经使用了单句代码的语法，也就是使用一对<code>&acute;</code>进行包裹，不过难免我们会在这里语法当中使用这个符号本身，就像现在这样。我这里的解决方法是使用的<code>&lt;code&gt;&lt;/code&gt;</code>标签包裹反引号的HTML字符代码<code>&amp;acute;</code>，保证博客不对这段文本进行错误渲染。当然，如果其中有包括正常文本，其实也有更简单的方法：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">``正常显示反引号`</span>code<span class="code">`其实很简单`</span>。``</span><br></pre></td></tr></table></figure><p><code>正常显示反引号`code`其实很简单`。</code></p><p>可以发现，单句代码的语法可以使用两个反引号包裹，实现在内部正常显示反引号字符。当然，处于末尾的反引号字符同样有可能会被错误渲染，因此我在其后又加了一个句号，这才保证其正常显示。</p><p>那么……代码块又该怎么写呢？</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">import this</span><br><span class="line">print(&quot;Hello, world!&quot;)</span><br></pre></td></tr></table></figure><pre><code>import thisprint(&quot;Hello, world!&quot;)</code></pre><p>可以发现，将段落缩进四个空格就能将一块段落渲染为代码块，不过这种缩进并不是那么让人喜欢，毕竟它在文本编辑时会影响阅读体验，因此我们实际上更常用的是不缩进的代码块语法：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">-<span class="code">```Python</span></span><br><span class="line"><span class="code">import this</span></span><br><span class="line"><span class="code">print(&quot;Hello, world!&quot;)</span></span><br><span class="line"><span class="code">```</span>-</span><br><span class="line">(这里为了渲染器不错误渲染这个代码块，特意在前后加了-)</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> this</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, world!&quot;</span>)</span><br></pre></td></tr></table></figure><p>可以发现，使用成对的三个反引号包裹文本，便能将其间的文本声明为代码块。而在首行的三个反引号后，还可以指定代码块的编程语言（例如我在这里使用的Python）。md渲染器会根据代码块的语言类型，来针对不同的编程语言进行着色（着色效果因渲染器而异）。</p><p>技术类博客会大量使用这种代码块语法（例如这个博客），因此这个语法还是挺重要的对吧？</p><h3 id="分割线与转义字符"><a href="#分割线与转义字符" class="headerlink" title="分割线与转义字符"></a>分割线与转义字符</h3><p>在一些情况下，我们可能会面临不使用标题但又需要明显分割文段的尴尬情况，在HTML里面，<code>&lt;hr /&gt;</code>来声明一根分割线，这在md中也有对应的语法：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="strong">***</span></span><br><span class="line"><span class="strong">__<span class="emphasis">_</span></span></span><br></pre></td></tr></table></figure><hr><hr><hr><p>可以发现，连续使用三个以上的<code>-</code>、<code>*</code>或<code>_</code>便能声明一根分割线，上面的三个分割线就是这么来的。当然，如果各位愿意，用<code>&lt;hr /&gt;</code>也是没问题的，虽然我并不推荐使用它。</p><p>与此同时，从刚刚开始各位应该可以发现一件事，就是我在担心博客的渲染问题，这实际上就是在使用特殊符号时的一种担心。md中可以使用反斜线<code>\</code>来对特殊字符进行转义：</p><table><thead><tr><th align="center">字符</th><th align="center">解释</th></tr></thead><tbody><tr><td align="center">\</td><td align="center">反斜线</td></tr><tr><td align="center">`</td><td align="center">反引号</td></tr><tr><td align="center">*</td><td align="center">星号</td></tr><tr><td align="center">_</td><td align="center">下划线</td></tr><tr><td align="center">{}</td><td align="center">花括号</td></tr><tr><td align="center">[]</td><td align="center">方括号</td></tr><tr><td align="center">()</td><td align="center">圆括号</td></tr><tr><td align="center">#</td><td align="center">井号</td></tr><tr><td align="center">+</td><td align="center">加号</td></tr><tr><td align="center">-</td><td align="center">减号</td></tr><tr><td align="center">.</td><td align="center">点</td></tr><tr><td align="center">!</td><td align="center">感叹号（半角）</td></tr><tr><td align="center">|</td><td align="center">竖线</td></tr></tbody></table><p>除了转义，我们还会遇到使用特殊符号的情况，这时我们可以使用HTML字符代码来表示特定字符。这里就不用列表来详细罗列了，感兴趣的各位可以在互联网上搜索。</p><h2 id="Markdown拓展语法"><a href="#Markdown拓展语法" class="headerlink" title="Markdown拓展语法"></a>Markdown拓展语法</h2><p>现在，我们就可以来学习一下高阶的东西了，当然实际上刚刚也说了一些高级语法，当然，我觉得无伤大雅。我们主要介绍这些：</p><ul><li>表格</li><li>脚注</li><li>任务列表</li><li>定义列表</li></ul><p>这四个也算是比较常用的了。</p><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>在上面，我们就已经见识过md的表格了，现在我们来定义一个新的表格试试水：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| HEAD1 | HEAD2 | HEAD3 |</span><br><span class="line">|  ---  |  ---  |  ---  |</span><br><span class="line">| CONT1 | <span class="code">`CONT2`</span> | <span class="strong">**CONT3**</span> |</span><br><span class="line">| <span class="emphasis">*CONT1*</span> | CONT2 | CONT3 |</span><br></pre></td></tr></table></figure><table><thead><tr><th>HEAD1</th><th>HEAD2</th><th>HEAD3</th></tr></thead><tbody><tr><td>CONT1</td><td><code>CONT2</code></td><td><strong>CONT3</strong></td></tr><tr><td><em>CONT1</em></td><td>CONT2</td><td>CONT3</td></tr></tbody></table><p>表格语法的第一行是定义表格的表头，表头一般情况下会被md渲染器进行字体加粗、背景色加重的着重渲染，并且表头内的文本是居中的。而在第二行，看起来就像是在分割表头和表格的内容，而在第三行以及之后，我们又开始使用第一行的写法了，但是渲染出的样式却与表头完全不同。</p><p>还有一个细节，那就是实际上我们在表格中使用了简单的md的其他语法，这里使用的强调语法，而实际上，表格里面也只能使用强调语法。</p><p>不过，我们有时也需要处理表格内单元格对齐的问题，这个在md里也能简单处理：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| HEAD1 | HEAD2 | HEAD3 |</span><br><span class="line">|  :---  |  :---:  |  ---:  |</span><br><span class="line">| <span class="emphasis">*LEFT*</span> | <span class="code">`CENTER`</span> | <span class="strong">**RIGHT**</span> |</span><br><span class="line">| <span class="emphasis">*LEFT*</span> | <span class="code">`CENTER`</span> | <span class="strong">**RIGHT**</span> |</span><br></pre></td></tr></table></figure><table><thead><tr><th align="left">HEAD1</th><th align="center">HEAD2</th><th align="right">HEAD3</th></tr></thead><tbody><tr><td align="left"><em>LEFT</em></td><td align="center"><code>CENTER</code></td><td align="right"><strong>RIGHT</strong></td></tr><tr><td align="left"><em>LEFT</em></td><td align="center"><code>CENTER</code></td><td align="right"><strong>RIGHT</strong></td></tr></tbody></table><p>可以发现，我们在第二行的对应单元格中<code>---</code>的前后加上了<code>:</code>，从而达到了不同的对齐效果，但是如我们所见，这个对齐改变的是所在列的所有单元格的对齐方式（包括表头）。我个人在实际使用表格时，只会使用居中对齐，而各位如何使用就看各位自己的想法和心情了。</p><h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p>我们经常可以在一些论文文献中见到某个词上带有[1]上标的这种情况，这就是我们说的脚注。脚注通常都会在文末进行详细解释，或者指出其引用的其他文献、做注释等。在md中也可以定义脚注，就像这样：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">BiliBili[^1]</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">https://www.bilibili.com/</span></span><br></pre></td></tr></table></figure><p>BiliBili<a href="https://www.bilibili.com/">^1</a></p><p>…</p><p>大部分md渲染器并不会渲染<code>[^1]: https://www.bilibili.com/</code>这个部分，而这个部分也不会被显示，它的<code>:</code>后面的文本可以是这里的链接，也可以是一段文本，不过我的这个博客框架似乎会将脚注<code>[^1]</code>渲染为指向<code>[^1]: https://www.bilibili.com/</code>冒号后内容的超链接，因此我这里就索性直接用的链接。</p><p>就我个人来说，实际上我基本就没用过脚注，在现在所使用的博客框架肯定更是不会用它了，因为同样的功能完全可以用上面提到的链接语法实现。不过这个也仁者见仁智者见智，对吧。</p><h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><p>任务列表，我个人其实更喜欢叫它清单，这个列表在md中的定义就像定义无序列表一样简单：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] 任务1</span><br><span class="line"><span class="bullet">-</span> [x] 任务2</span><br></pre></td></tr></table></figure><ul><li><input disabled="" type="checkbox"> 任务1</li><li><input checked="" disabled="" type="checkbox"> 任务2</li></ul><p>可以发现，它就是在无序列表的基础上，在后面加上了一对<code>[ ]</code>，请注意，括号内必须有个空格占位，这样才能表示一个空的多选框。而想表示复选框被选中就换成<code>[x]</code>。<code>[ ]</code>和<code>[x]</code>与<code>-</code>之间也需要用空格隔开，不然这个语法同样不会生效。</p><p>这个语法我在别人的博客倒是有见到过不少次，但我自己基本上只在本地使用，Typora在定义这个后，可以很方便的选中&#x2F;取消选中复选框，因此拿来当作本地的清单还是挺推荐的。</p><h3 id="定义列表"><a href="#定义列表" class="headerlink" title="定义列表"></a>定义列表</h3><p>定义列表一般情况下用来解释一些术语，而在一些md渲染器中也是支持的，语法如下：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">齐兰</span><br><span class="line">: 这就是我！不是什么术语！</span><br><span class="line">: 拿自己做例子还挺好玩的（不是）</span><br></pre></td></tr></table></figure><dl><dt>齐兰<br>: 这就是我！不是什么术语！</dt><dd>拿自己做例子还挺好玩的（不是）</dd></dl><p>似乎在我使用的这个博客框架下，定义列表支持的不是很好，正常情况下两条<code>:</code>开头的内容应该都是有缩进的。</p><p>定义列表的使用场景我个人也没怎么见过，不过在国外网站上倒是见过不少次。个人认为这个语法也能在一定程度上使用无序列表替代，不过这也是仁者见仁智者见智的事（虽然我觉着，其实语义化才应该是主流）。</p><h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>算是花了大量的篇幅介绍了md的常用语法，当然，md还有一些语法我还没有介绍到，这个就之后抽时间写了。希望上面的内容能够对各位有所帮助，在学习md时也推荐将代码复制到md编辑器后查看实际效果，这样才能对它的语法有更深入的记忆。</p>]]></content>
+      
+      
       <categories>
-        <category>日常</category>
+          
+          <category> 技术 </category>
+          
       </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown简单教学</title>
-    <url>/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>作为一名学习数媒专业的学生，对我来说排版并不算什么难事，但有时我也不想花时间在排版美化上，并且也有很多不是设计类专业的人也需要一个无需过多设计就能达到不错视觉效果，或者说可读性的文档。现在的一个通用解决方式便是Markdown，这个轻量标记语言确实挺好用的，包括这篇博客也是拿它进行攥写的。</p>
-<p>接下来就正式进入内容。（图像内的渲染效果使用的Typora的Github主题进行展示）</p>
-<h2 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h2><p>Markdown的语法整体是比较简单的，如果不算上LaTex这些高级语法的话，学习md（Markdown的缩写）应该花不了多少时间。所以这里就先介绍一些简单的语法吧。</p>
-<p>对了，语法的效果展示使用<a href="https://typoraio.cn/">Typora</a>，这款md编辑器目前是收费的，各位也可以用自己喜欢的编辑器来学习，例如我写博客时就喜欢用<a href="https://code.visualstudio.com/">VSCode</a>。</p>
-<h3 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h3><p>在正式开始语法介绍前，我们得清楚Markdown（之后简称md）的文件类型。Markdown作为一名轻量标记语言，它的文件格式为<code>.md</code>，这个文件本质上就是一个文本文件，因此如果愿意，直接拿<code>.txt</code>编写md也是完全没问题的。</p>
-<p>md的效果渲染主要依靠市面上的各种Markdown编辑器、渲染器完成，因此md在不同渲染器的渲染效果可能会有所不同。</p>
-<h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>md里边最简单的语法实际上是段落，它的写法如下：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">所以，这就是段落。</span><br><span class="line"></span><br><span class="line">Ok，这是另一个段落</span><br></pre></td></tr></table></figure>
-
-<p>在这篇博客内看到的所有正文（包括这一段），都是使用的相同语法，所以这里我就不放图片展示了。</p>
-<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>一篇文章，一篇博客总是少不了标题的，而在md中，标题的语法非常简单，我们先来看一级标题：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br></pre></td></tr></table></figure>
-
-<p>那么二级标题、三级标题甚至往后呢？</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="section">###### 六级标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">####### 七级标题（并不支持）</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/%E6%A0%87%E9%A2%98.png" alt="标题"></p>
-<p>可以发现，<code>#</code>的数量能够决定标题的级数，md支持编写者定义1~6级标题，标题从1级到6级的字体大小逐级递减。一般来说，我们只会用到其中的1~4级标题，但是由于博客的特殊性，一级标题在博客攥写时一般也不使用，因此在博客下常用的就是2~4级标题了。</p>
-<h3 id="图片和链接"><a href="#图片和链接" class="headerlink" title="图片和链接"></a>图片和链接</h3><p>图片和链接虽然二者并不相同，但在md中，它们的语法却颇为相似，我们先来看看二者的语法：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">这是一个链接</span>](<span class="link">https://www.bilibili.com</span>)</span><br><span class="line">![<span class="string">这是一张图像</span>](<span class="link">D:\桌面文件\物理超度.jpg</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/%E5%9B%BE%E5%83%8F%E5%92%8C%E9%93%BE%E6%8E%A5.png" alt="图片和链接"></p>
-<p>可以发现，二者语法只是相差了一个半角叹号<code>!</code>，但是实现的效果却截然不同。当然，这里图片的路径我使用的绝对路径，实际上我们也可以使用相对路径和链接来引用图片。现在，我们假设在桌面的test文件夹下有如下内容:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">/text</span><br><span class="line">    - test.md</span><br><span class="line">    - /img</span><br><span class="line">        test.png</span><br></pre></td></tr></table></figure>
-
-<p>我们要做的，就是将img下的图像用相对路径和绝对路径两种方式进行引用，然后在网络上随便找个图像链接，作为我们的第三个示例：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">相对路径</span>](<span class="link">./img/test.png</span>)</span><br><span class="line">![<span class="string">绝对路径</span>](<span class="link">C:\Users\ziran6959\Desktop\test\img\test.png</span>)</span><br><span class="line">![<span class="string">网络链接</span>](<span class="link">https://www.bilibili.com/favicon.ico</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/%E5%9B%BE%E5%83%8F%E7%9A%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F.png" alt="图片的引用方式"></p>
-<p>可以发现，我们先是分别用相对路径和绝对路径引用了同一张图片，然后我们再在网络上找到了B站的Icon链接并进行了引用。在二者语法中<code>[]</code>内都是填写一个任意文本，图片引用语法中，<code>[]</code>内的文本会在图片丢失时显示，而链接语法中的<code>[]</code><br>则是链接的文本。<code>()</code>内的内容都是其引用（指向）的地址，这里的地址都能使用上述提到的三种地址（不过我想应该没多少人会在链接的语法里边使用本地地址吧？）</p>
-<p>此外，二者还可以指定鼠标悬停到其上后的标题文本，就像这样：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">试试悬停？</span>](<span class="link">&quot;&quot; &quot;悬停试试！&quot;</span>)</span><br><span class="line">![<span class="string">试试悬停</span>](<span class="link">&quot;&quot; &quot;悬停试试！&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>来看看效果（将鼠标放在其上试试，顺带一提，这里顺带展示了图片丢失时图片语法的情况）：<br><a href="https://" title="悬停试试！">试试悬停？</a><br><img src="/%22%22" alt="试试悬停" title="悬停试试！"></p>
-<p>总结起来，它们的语法模板就是这样的：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">TEXT</span>](<span class="link">Link &quot;Title&quot;</span>)</span><br><span class="line">![<span class="string">TEXT</span>](<span class="link">Link &quot;Title&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>其中：</p>
-<ul>
-<li><code>TEXT</code>：链接的文本，图片的Alt文本</li>
-<li><code>Link</code>：链接或图片的地址（可以是本地绝对路径、相对路径，以及网络链接）</li>
-<li><code>Title</code>：鼠标悬停时显示的标题文本</li>
-</ul>
-<p>不过各位也许有发现，似乎图片的语法并不支持指定图片的尺寸，这可是个头疼的问题，毕竟有时我们可是会引用一些尺寸稍大的文件的。幸运的是，md实际上也能支持一些HTML标签，<code>&lt;img/&gt;</code>就在其支持的范围之内：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;path&quot;</span> <span class="attr">width</span>=<span class="string">&quot;[num][dw]&quot;</span> <span class="attr">height</span>=<span class="string">&quot;[num][dw]&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;text&quot;</span> <span class="attr">title</span>=<span class="string">&quot;text&quot;</span> /&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p>在md中使用<code>&lt;img/&gt;</code>就像在HTML中使用它一样，不过正常情况下并不推荐在md中使用HTML标签就是了。</p>
-<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>有时，我们需要让阅读者注意到特定的关键词，或者往正文文本中插入单句代码。md贴心的为我们提供了如下的语法：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">*斜体*</span></span><br><span class="line"><span class="strong">**粗体**</span></span><br><span class="line"><span class="strong">**<span class="emphasis">*粗斜体*</span>**</span>（一些md渲染器并不能很好的同时显示粗斜体，也可能是使用的字体的问题）</span><br><span class="line">~~删除线~~</span><br><span class="line"><span class="code">`单句代码`</span></span><br><span class="line">==底部着色==（一些md渲染器并不支持此语法）</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/%E5%BC%BA%E8%B0%83.png" alt="强调"></p>
-<p>当然，就像展示的那样，一些md并不能很好的支持<code>==cont==</code>底部着色，还有<code>***cont***</code>粗斜体，因此实际使用这些语法时得了解所使用的md渲染器到底支不支持它们。</p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>引用一些文献、他人的博客选段总是在所难免的，如果需要让读者清楚某段文本是引用文本，那该怎么办呢？</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用文本</span></span><br></pre></td></tr></table></figure>
-
-<p>渲染效果如下（不同的md渲染器可能会有所不同，这里我就偷懒用博客自己的渲染方案了）：</p>
-<blockquote>
-<p>引用文本</p>
-</blockquote>
-<p>看着是不是特别醒目？还没完，这个语法可以支持多个段落，甚至还能嵌套：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用文本1</span></span><br><span class="line"><span class="quote">&gt; 引用文本2</span></span><br><span class="line"><span class="quote">&gt; 引用文本3</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; 引用文本1</span></span><br><span class="line"><span class="quote">&gt; &gt; 引用文本2</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>引用文本1<br>引用文本2<br>引用文本3</p>
-</blockquote>
-<blockquote>
-<p>引用文本1</p>
-<blockquote>
-<p>引用文本2</p>
-</blockquote>
-</blockquote>
-<p>当然，引用块多了似乎也不是太好，影响观感不说，要是被认为通篇都是引用，那还不如转载算了对吧。</p>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>列表可是个好东西，能够将散乱的信息进行整合。信息整合总归得区分其是否需要关心顺序逻辑，因此md提供了两种列表的语法：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 无序列表1</span><br><span class="line"><span class="bullet">-</span> 无序列表2</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 有序列表1</span><br><span class="line"><span class="bullet">2.</span> 有序列表2</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>无序列表1</li>
-<li>无序列表2</li>
-</ul>
-<ol>
-<li>有序列表1</li>
-<li>有序列表2</li>
-</ol>
-<p>无序列表除了可以使用<code>-</code>开头，用<code>*</code>、<code>+</code>也是没问题的。有序列表以连续的有序列表定义中的第一个的数字开始，例如下面的有序列表中，第一个的序号为2，第二个同样是2：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">2.</span> 有序列表1</span><br><span class="line"><span class="bullet">2.</span> 有序列表2</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>有序列表1</li>
-<li>有序列表2</li>
-</ol>
-<p>可以发现，至少在这篇博客中，序号是从2开始依次增加的，即便我为二者给定的序号都是相同的。不过在实际攥写时，并不推荐如此攥写，渲染器虽然能够帮我们解决问题，但是自己改的时候恐怕会一头雾水。由于md可以使用普通的文本编辑器打开，因此像上面的有序列表写法也会给这类读者造成困扰。</p>
-<p>此外，无序列表、有序列表和引用一样，都能支持嵌套：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">+</span> 一级</span><br><span class="line"><span class="bullet">  +</span> 二级</span><br><span class="line"><span class="bullet">    +</span> 三级</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 一级</span><br><span class="line"><span class="bullet">    1.</span> 二级</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>一级<ul>
-<li>二级<ul>
-<li>三级</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>一级<ol>
-<li>二级</li>
-</ol>
-</li>
-</ol>
-<p>可以发现，无序列表在嵌套时，渲染器会为其使用不同的项目符号，并且进行缩进，我这里使用的两个空格缩进（有序列表用的四个空格）。请注意，嵌套时同一级别必须使用相同的缩进量，不然渲染器很可能将不同缩进量的列表当作不同的级别。</p>
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>刚刚其实我们已经使用了单句代码的语法，也就是使用一对<code>&acute;</code>进行包裹，不过难免我们会在这里语法当中使用这个符号本身，就像现在这样。我这里的解决方法是使用的<code>&lt;code&gt;&lt;/code&gt;</code>标签包裹反引号的HTML字符代码<code>&amp;acute;</code>，保证博客不对这段文本进行错误渲染。当然，如果其中有包括正常文本，其实也有更简单的方法：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">``正常显示反引号`</span>code<span class="code">`其实很简单`</span>。``</span><br></pre></td></tr></table></figure>
-
-<p><code>正常显示反引号`code`其实很简单`。</code></p>
-<p>可以发现，单句代码的语法可以使用两个反引号包裹，实现在内部正常显示反引号字符。当然，处于末尾的反引号字符同样有可能会被错误渲染，因此我在其后又加了一个句号，这才保证其正常显示。</p>
-<p>那么……代码块又该怎么写呢？</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">import this</span><br><span class="line">print(&quot;Hello, world!&quot;)</span><br></pre></td></tr></table></figure>
-
-<pre><code>import this
-print(&quot;Hello, world!&quot;)
-</code></pre>
-<p>可以发现，将段落缩进四个空格就能将一块段落渲染为代码块，不过这种缩进并不是那么让人喜欢，毕竟它在文本编辑时会影响阅读体验，因此我们实际上更常用的是不缩进的代码块语法：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">-<span class="code">```Python</span></span><br><span class="line"><span class="code">import this</span></span><br><span class="line"><span class="code">print(&quot;Hello, world!&quot;)</span></span><br><span class="line"><span class="code">```</span>-</span><br><span class="line">(这里为了渲染器不错误渲染这个代码块，特意在前后加了-)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> this</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, world!&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>可以发现，使用成对的三个反引号包裹文本，便能将其间的文本声明为代码块。而在首行的三个反引号后，还可以指定代码块的编程语言（例如我在这里使用的Python）。md渲染器会根据代码块的语言类型，来针对不同的编程语言进行着色（着色效果因渲染器而异）。</p>
-<p>技术类博客会大量使用这种代码块语法（例如这个博客），因此这个语法还是挺重要的对吧？</p>
-<h3 id="分割线与转义字符"><a href="#分割线与转义字符" class="headerlink" title="分割线与转义字符"></a>分割线与转义字符</h3><p>在一些情况下，我们可能会面临不使用标题但又需要明显分割文段的尴尬情况，在HTML里面，<code>&lt;hr /&gt;</code>来声明一根分割线，这在md中也有对应的语法：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="strong">***</span></span><br><span class="line"><span class="strong">__<span class="emphasis">_</span></span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<hr>
-<hr>
-<p>可以发现，连续使用三个以上的<code>-</code>、<code>*</code>或<code>_</code>便能声明一根分割线，上面的三个分割线就是这么来的。当然，如果各位愿意，用<code>&lt;hr /&gt;</code>也是没问题的，虽然我并不推荐使用它。</p>
-<p>与此同时，从刚刚开始各位应该可以发现一件事，就是我在担心博客的渲染问题，这实际上就是在使用特殊符号时的一种担心。md中可以使用反斜线<code>\</code>来对特殊字符进行转义：</p>
-<table>
-<thead>
-<tr>
-<th align="center">字符</th>
-<th align="center">解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\</td>
-<td align="center">反斜线</td>
-</tr>
-<tr>
-<td align="center">`</td>
-<td align="center">反引号</td>
-</tr>
-<tr>
-<td align="center">*</td>
-<td align="center">星号</td>
-</tr>
-<tr>
-<td align="center">_</td>
-<td align="center">下划线</td>
-</tr>
-<tr>
-<td align="center">{}</td>
-<td align="center">花括号</td>
-</tr>
-<tr>
-<td align="center">[]</td>
-<td align="center">方括号</td>
-</tr>
-<tr>
-<td align="center">()</td>
-<td align="center">圆括号</td>
-</tr>
-<tr>
-<td align="center">#</td>
-<td align="center">井号</td>
-</tr>
-<tr>
-<td align="center">+</td>
-<td align="center">加号</td>
-</tr>
-<tr>
-<td align="center">-</td>
-<td align="center">减号</td>
-</tr>
-<tr>
-<td align="center">.</td>
-<td align="center">点</td>
-</tr>
-<tr>
-<td align="center">!</td>
-<td align="center">感叹号（半角）</td>
-</tr>
-<tr>
-<td align="center">|</td>
-<td align="center">竖线</td>
-</tr>
-</tbody></table>
-<p>除了转义，我们还会遇到使用特殊符号的情况，这时我们可以使用HTML字符代码来表示特定字符。这里就不用列表来详细罗列了，感兴趣的各位可以在互联网上搜索。</p>
-<h2 id="Markdown拓展语法"><a href="#Markdown拓展语法" class="headerlink" title="Markdown拓展语法"></a>Markdown拓展语法</h2><p>现在，我们就可以来学习一下高阶的东西了，当然实际上刚刚也说了一些高级语法，当然，我觉得无伤大雅。我们主要介绍这些：</p>
-<ul>
-<li>表格</li>
-<li>脚注</li>
-<li>任务列表</li>
-<li>定义列表</li>
-</ul>
-<p>这四个也算是比较常用的了。</p>
-<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>在上面，我们就已经见识过md的表格了，现在我们来定义一个新的表格试试水：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| HEAD1 | HEAD2 | HEAD3 |</span><br><span class="line">|  ---  |  ---  |  ---  |</span><br><span class="line">| CONT1 | <span class="code">`CONT2`</span> | <span class="strong">**CONT3**</span> |</span><br><span class="line">| <span class="emphasis">*CONT1*</span> | CONT2 | CONT3 |</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>HEAD1</th>
-<th>HEAD2</th>
-<th>HEAD3</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>CONT1</td>
-<td><code>CONT2</code></td>
-<td><strong>CONT3</strong></td>
-</tr>
-<tr>
-<td><em>CONT1</em></td>
-<td>CONT2</td>
-<td>CONT3</td>
-</tr>
-</tbody></table>
-<p>表格语法的第一行是定义表格的表头，表头一般情况下会被md渲染器进行字体加粗、背景色加重的着重渲染，并且表头内的文本是居中的。而在第二行，看起来就像是在分割表头和表格的内容，而在第三行以及之后，我们又开始使用第一行的写法了，但是渲染出的样式却与表头完全不同。</p>
-<p>还有一个细节，那就是实际上我们在表格中使用了简单的md的其他语法，这里使用的强调语法，而实际上，表格里面也只能使用强调语法。</p>
-<p>不过，我们有时也需要处理表格内单元格对齐的问题，这个在md里也能简单处理：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| HEAD1 | HEAD2 | HEAD3 |</span><br><span class="line">|  :---  |  :---:  |  ---:  |</span><br><span class="line">| <span class="emphasis">*LEFT*</span> | <span class="code">`CENTER`</span> | <span class="strong">**RIGHT**</span> |</span><br><span class="line">| <span class="emphasis">*LEFT*</span> | <span class="code">`CENTER`</span> | <span class="strong">**RIGHT**</span> |</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">HEAD1</th>
-<th align="center">HEAD2</th>
-<th align="right">HEAD3</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><em>LEFT</em></td>
-<td align="center"><code>CENTER</code></td>
-<td align="right"><strong>RIGHT</strong></td>
-</tr>
-<tr>
-<td align="left"><em>LEFT</em></td>
-<td align="center"><code>CENTER</code></td>
-<td align="right"><strong>RIGHT</strong></td>
-</tr>
-</tbody></table>
-<p>可以发现，我们在第二行的对应单元格中<code>---</code>的前后加上了<code>:</code>，从而达到了不同的对齐效果，但是如我们所见，这个对齐改变的是所在列的所有单元格的对齐方式（包括表头）。我个人在实际使用表格时，只会使用居中对齐，而各位如何使用就看各位自己的想法和心情了。</p>
-<h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p>我们经常可以在一些论文文献中见到某个词上带有[1]上标的这种情况，这就是我们说的脚注。脚注通常都会在文末进行详细解释，或者指出其引用的其他文献、做注释等。在md中也可以定义脚注，就像这样：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">BiliBili[^1]</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">https://www.bilibili.com/</span></span><br></pre></td></tr></table></figure>
-
-<p>BiliBili<a href="https://www.bilibili.com/">^1</a></p>
-<p>…</p>
-<p>大部分md渲染器并不会渲染<code>[^1]: https://www.bilibili.com/</code>这个部分，而这个部分也不会被显示，它的<code>:</code>后面的文本可以是这里的链接，也可以是一段文本，不过我的这个博客框架似乎会将脚注<code>[^1]</code>渲染为指向<code>[^1]: https://www.bilibili.com/</code>冒号后内容的超链接，因此我这里就索性直接用的链接。</p>
-<p>就我个人来说，实际上我基本就没用过脚注，在现在所使用的博客框架肯定更是不会用它了，因为同样的功能完全可以用上面提到的链接语法实现。不过这个也仁者见仁智者见智，对吧。</p>
-<h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><p>任务列表，我个人其实更喜欢叫它清单，这个列表在md中的定义就像定义无序列表一样简单：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] 任务1</span><br><span class="line"><span class="bullet">-</span> [x] 任务2</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><input disabled="" type="checkbox"> 任务1</li>
-<li><input checked="" disabled="" type="checkbox"> 任务2</li>
-</ul>
-<p>可以发现，它就是在无序列表的基础上，在后面加上了一对<code>[ ]</code>，请注意，括号内必须有个空格占位，这样才能表示一个空的多选框。而想表示复选框被选中就换成<code>[x]</code>。<code>[ ]</code>和<code>[x]</code>与<code>-</code>之间也需要用空格隔开，不然这个语法同样不会生效。</p>
-<p>这个语法我在别人的博客倒是有见到过不少次，但我自己基本上只在本地使用，Typora在定义这个后，可以很方便的选中&#x2F;取消选中复选框，因此拿来当作本地的清单还是挺推荐的。</p>
-<h3 id="定义列表"><a href="#定义列表" class="headerlink" title="定义列表"></a>定义列表</h3><p>定义列表一般情况下用来解释一些术语，而在一些md渲染器中也是支持的，语法如下：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">齐兰</span><br><span class="line">: 这就是我！不是什么术语！</span><br><span class="line">: 拿自己做例子还挺好玩的（不是）</span><br></pre></td></tr></table></figure>
-
-<dl><dt>齐兰<br>: 这就是我！不是什么术语！</dt><dd>拿自己做例子还挺好玩的（不是）</dd></dl><p>似乎在我使用的这个博客框架下，定义列表支持的不是很好，正常情况下两条<code>:</code>开头的内容应该都是有缩进的。</p>
-<p>定义列表的使用场景我个人也没怎么见过，不过在国外网站上倒是见过不少次。个人认为这个语法也能在一定程度上使用无序列表替代，不过这也是仁者见仁智者见智的事（虽然我觉着，其实语义化才应该是主流）。</p>
-<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>算是花了大量的篇幅介绍了md的常用语法，当然，md还有一些语法我还没有介绍到，这个就之后抽时间写了。希望上面的内容能够对各位有所帮助，在学习md时也推荐将代码复制到md编辑器后查看实际效果，这样才能对它的语法有更深入的记忆。</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+            <tag> Markdown </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>折腾是一种美德（合理合法的情况下）</title>
+      <link href="/2023/12/31/%E6%8A%98%E8%85%BE%E4%BA%86%E8%89%AF%E4%B9%85/"/>
+      <url>/2023/12/31/%E6%8A%98%E8%85%BE%E4%BA%86%E8%89%AF%E4%B9%85/</url>
+      
+        <content type="html"><![CDATA[<h2 id="发生了什么？"><a href="#发生了什么？" class="headerlink" title="发生了什么？"></a>发生了什么？</h2><p>挑好主题，配置hexo，修改config，然后爆炸，天旋地转，人飞起来，任务完成。没错，作为头一次碰博客框架而且懒得折腾的后端程序员，这玩意居然花了我一晚上时间，不过好在，我成了。</p><h2 id="为什么要庆祝这个？"><a href="#为什么要庆祝这个？" class="headerlink" title="为什么要庆祝这个？"></a>为什么要庆祝这个？</h2><p>我觉得，如果有一天你拿了世界冠军什么的，多半也会炫耀，除非……你不是第一次拿到世界冠军。</p><p>对于一个很难完成的任务，如果你完成了，那便是一件值得骄傲的事，如果你失败了，也不必灰心，挑战总会失败，也不差这一次两次了。记录自己的成功，总结自己的失败，总是令人充满信心的，因为这样你才会相信，下一次能做得更好。</p><h2 id="中途遇到了什么问题？"><a href="#中途遇到了什么问题？" class="headerlink" title="中途遇到了什么问题？"></a>中途遇到了什么问题？</h2><p>这可就有点多了，排头的一个问题便是博客框架的选择，虽然我是很快的选择了Hexo这个成熟框架，不过我之前都是拿它当作临时的文档库来用的，你懂的。</p><p>其次的问题就是主题选择，Hexo的主题可谓是琳琅满目，各种风格的博客主题总有你能看上眼的，不过在选择好主题后的事情，就是对你的考验了。</p><p>我的这个博客选用了Butterfly这个框架，看上它的原因也很简单，就是它能配置满屏图背景（在懒得折腾的情况下），而且在网络上，它的反响也不错。不过嘛，有时可能看着越简单越上眼，实际部署可能就越难，当然，这个博客主题配置起来还是蛮简单的，只是我中途有遇到不少问题而已。</p><p>最值得拿出来说说的自然是这个，请看下面的代码：</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;aplayer no-destroy&quot;</span> <span class="attr">data-id</span>=<span class="string">&quot;9001623012&quot;</span> <span class="attr">data-server</span>=<span class="string">&quot;netease&quot;</span> <span class="attr">data-type</span>=<span class="string">&quot;playlist&quot;</span> <span class="attr">data-fixed</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-autoplay</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-theme</span>=<span class="string">&quot;#9B33F0&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>这是往页面嵌入音乐（播放列表）的代码，而我当时是想尝试折腾它播放本地音乐的，后来自然是以失败告终了，失败的原因倒也简单，似乎我的测试环境不能很好的读取模板，而这个div我也没查到其引用本地文件的方法。</p><h2 id="期间印象深刻的事情"><a href="#期间印象深刻的事情" class="headerlink" title="期间印象深刻的事情"></a>期间印象深刻的事情</h2><p>这个的话到也是有，比如我为了体验不同的主题反复创建删除博客根目录这件事，配置主题的<code>config</code>是件有点麻烦的事，而我最近由于学校内的作业已经心烦到没耐心了，可能你很好奇我为啥能够在这种情况下耐着性子弄完这个博客，说实话我也很好奇，不过也无所谓了。总之嘛……我觉得体验主题后如果懒得备份<code>config</code>或者懒得把<code>config</code>改回来，直接删除所有文件然后重新创建也是一个不错的方法（不过不推荐这么做就是了）。</p><p>这么一提还有一件事挺让我印象深刻的，就是搭建博客的那一天的晚上，正好是跨年，当我搭建到凌晨时偶然看到手机屏幕，看着刷满屏的“新年快乐”时，我莫名有种一些担子被放下的感觉，于是我也暂时放下了搭建博客的注意力，也开始向一些朋友发新年快乐，我甚至还发了俩红包出去，想想也挺有趣的不是吗。</p><p>最后一个印象深刻的事情……可能就是宿舍停电的事情了，这个直到次日早晨（实际上是中午）才解决的事情，愣是让我吐槽了学校网络拉跨一晚上。不过不得不说，当我自己拿起那个用于恢复供电的奇怪设备，并且真的靠那玩意儿恢复了宿舍供电时，我心里还是挺自豪的，就像我刚刚说的那样——成功的事值得骄傲，当然啊，也不能过度骄傲。</p><h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>算是我水的一篇博客这个，不过能水出一千多字也挺厉害的了。除了新年快乐，我还想说的是：</p><hr><p style="color: #9B33F0">相信，不一定会成功，但不相信，一定会失败</p><p style="color: #9B33F0" align="right">——陈墨（恋爱绮谭 不存在的真相）</p><hr>]]></content>
+      
+      
       <categories>
-        <category>技术</category>
+          
+          <category> 日常 </category>
+          
       </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>Markdown</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 日常 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
