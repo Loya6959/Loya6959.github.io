@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>折腾是一种美德（合理合法的情况下）</title>
+    <url>/2023/12/31/%E6%8A%98%E8%85%BE%E4%BA%86%E8%89%AF%E4%B9%85/</url>
+    <content><![CDATA[<h2 id="发生了什么？"><a href="#发生了什么？" class="headerlink" title="发生了什么？"></a>发生了什么？</h2><p>挑好主题，配置hexo，修改config，然后爆炸，天旋地转，人飞起来，任务完成。没错，作为头一次碰博客框架而且懒得折腾的后端程序员，这玩意居然花了我一晚上时间，不过好在，我成了。</p>
+<h2 id="为什么要庆祝这个？"><a href="#为什么要庆祝这个？" class="headerlink" title="为什么要庆祝这个？"></a>为什么要庆祝这个？</h2><p>我觉得，如果有一天你拿了世界冠军什么的，多半也会炫耀，除非……你不是第一次拿到世界冠军。</p>
+<p>对于一个很难完成的任务，如果你完成了，那便是一件值得骄傲的事，如果你失败了，也不必灰心，挑战总会失败，也不差这一次两次了。记录自己的成功，总结自己的失败，总是令人充满信心的，因为这样你才会相信，下一次能做得更好。</p>
+<h2 id="中途遇到了什么问题？"><a href="#中途遇到了什么问题？" class="headerlink" title="中途遇到了什么问题？"></a>中途遇到了什么问题？</h2><p>这可就有点多了，排头的一个问题便是博客框架的选择，虽然我是很快的选择了Hexo这个成熟框架，不过我之前都是拿它当作临时的文档库来用的，你懂的。</p>
+<p>其次的问题就是主题选择，Hexo的主题可谓是琳琅满目，各种风格的博客主题总有你能看上眼的，不过在选择好主题后的事情，就是对你的考验了。</p>
+<p>我的这个博客选用了Butterfly这个框架，看上它的原因也很简单，就是它能配置满屏图背景（在懒得折腾的情况下），而且在网络上，它的反响也不错。不过嘛，有时可能看着越简单越上眼，实际部署可能就越难，当然，这个博客主题配置起来还是蛮简单的，只是我中途有遇到不少问题而已。</p>
+<p>最值得拿出来说说的自然是这个，请看下面的代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;aplayer no-destroy&quot;</span> <span class="attr">data-id</span>=<span class="string">&quot;9001623012&quot;</span> <span class="attr">data-server</span>=<span class="string">&quot;netease&quot;</span> <span class="attr">data-type</span>=<span class="string">&quot;playlist&quot;</span> <span class="attr">data-fixed</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-autoplay</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-theme</span>=<span class="string">&quot;#9B33F0&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这是往页面嵌入音乐（播放列表）的代码，而我当时是想尝试折腾它播放本地音乐的，后来自然是以失败告终了，失败的原因倒也简单，似乎我的测试环境不能很好的读取模板，而这个div我也没查到其引用本地文件的方法。</p>
+<h2 id="期间印象深刻的事情"><a href="#期间印象深刻的事情" class="headerlink" title="期间印象深刻的事情"></a>期间印象深刻的事情</h2><p>这个的话到也是有，比如我为了体验不同的主题反复创建删除博客根目录这件事，配置主题的<code>config</code>是件有点麻烦的事，而我最近由于学校内的作业已经心烦到没耐心了，可能你很好奇我为啥能够在这种情况下耐着性子弄完这个博客，说实话我也很好奇，不过也无所谓了。总之嘛……我觉得体验主题后如果懒得备份<code>config</code>或者懒得把<code>config</code>改回来，直接删除所有文件然后重新创建也是一个不错的方法（不过不推荐这么做就是了）。</p>
+<p>这么一提还有一件事挺让我印象深刻的，就是搭建博客的那一天的晚上，正好是跨年，当我搭建到凌晨时偶然看到手机屏幕，看着刷满屏的“新年快乐”时，我莫名有种一些担子被放下的感觉，于是我也暂时放下了搭建博客的注意力，也开始向一些朋友发新年快乐，我甚至还发了俩红包出去，想想也挺有趣的不是吗。</p>
+<p>最后一个印象深刻的事情……可能就是宿舍停电的事情了，这个直到次日早晨（实际上是中午）才解决的事情，愣是让我吐槽了学校网络拉跨一晚上。不过不得不说，当我自己拿起那个用于恢复供电的奇怪设备，并且真的靠那玩意儿恢复了宿舍供电时，我心里还是挺自豪的，就像我刚刚说的那样——成功的事值得骄傲，当然啊，也不能过度骄傲。</p>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>算是我水的一篇博客这个，不过能水出一千多字也挺厉害的了。除了新年快乐，我还想说的是：</p>
+<hr>
+<p style="color: #9B33F0">相信，不一定会成功，但不相信，一定会失败</p>
+<p style="color: #9B33F0" align="right">——陈墨（恋爱绮谭 不存在的真相）</p>
+
+<hr>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown简单教学</title>
     <url>/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>作为一名学习数媒专业的学生，对我来说排版并不算什么难事，但有时我也不想花时间在排版美化上，并且也有很多不是设计类专业的人也需要一个无需过多设计就能达到不错视觉效果，或者说可读性的文档。现在的一个通用解决方式便是Markdown，这个轻量标记语言确实挺好用的，包括这篇博客也是拿它进行攥写的。</p>
@@ -285,36 +315,6 @@ print(&quot;Hello, world!&quot;)
         <tag>技术</tag>
         <tag>Markdown</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>折腾是一种美德（合理合法的情况下）</title>
-    <url>/2023/12/31/%E6%8A%98%E8%85%BE%E4%BA%86%E8%89%AF%E4%B9%85/</url>
-    <content><![CDATA[<h2 id="发生了什么？"><a href="#发生了什么？" class="headerlink" title="发生了什么？"></a>发生了什么？</h2><p>挑好主题，配置hexo，修改config，然后爆炸，天旋地转，人飞起来，任务完成。没错，作为头一次碰博客框架而且懒得折腾的后端程序员，这玩意居然花了我一晚上时间，不过好在，我成了。</p>
-<h2 id="为什么要庆祝这个？"><a href="#为什么要庆祝这个？" class="headerlink" title="为什么要庆祝这个？"></a>为什么要庆祝这个？</h2><p>我觉得，如果有一天你拿了世界冠军什么的，多半也会炫耀，除非……你不是第一次拿到世界冠军。</p>
-<p>对于一个很难完成的任务，如果你完成了，那便是一件值得骄傲的事，如果你失败了，也不必灰心，挑战总会失败，也不差这一次两次了。记录自己的成功，总结自己的失败，总是令人充满信心的，因为这样你才会相信，下一次能做得更好。</p>
-<h2 id="中途遇到了什么问题？"><a href="#中途遇到了什么问题？" class="headerlink" title="中途遇到了什么问题？"></a>中途遇到了什么问题？</h2><p>这可就有点多了，排头的一个问题便是博客框架的选择，虽然我是很快的选择了Hexo这个成熟框架，不过我之前都是拿它当作临时的文档库来用的，你懂的。</p>
-<p>其次的问题就是主题选择，Hexo的主题可谓是琳琅满目，各种风格的博客主题总有你能看上眼的，不过在选择好主题后的事情，就是对你的考验了。</p>
-<p>我的这个博客选用了Butterfly这个框架，看上它的原因也很简单，就是它能配置满屏图背景（在懒得折腾的情况下），而且在网络上，它的反响也不错。不过嘛，有时可能看着越简单越上眼，实际部署可能就越难，当然，这个博客主题配置起来还是蛮简单的，只是我中途有遇到不少问题而已。</p>
-<p>最值得拿出来说说的自然是这个，请看下面的代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;aplayer no-destroy&quot;</span> <span class="attr">data-id</span>=<span class="string">&quot;9001623012&quot;</span> <span class="attr">data-server</span>=<span class="string">&quot;netease&quot;</span> <span class="attr">data-type</span>=<span class="string">&quot;playlist&quot;</span> <span class="attr">data-fixed</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-autoplay</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-theme</span>=<span class="string">&quot;#9B33F0&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这是往页面嵌入音乐（播放列表）的代码，而我当时是想尝试折腾它播放本地音乐的，后来自然是以失败告终了，失败的原因倒也简单，似乎我的测试环境不能很好的读取模板，而这个div我也没查到其引用本地文件的方法。</p>
-<h2 id="期间印象深刻的事情"><a href="#期间印象深刻的事情" class="headerlink" title="期间印象深刻的事情"></a>期间印象深刻的事情</h2><p>这个的话到也是有，比如我为了体验不同的主题反复创建删除博客根目录这件事，配置主题的<code>config</code>是件有点麻烦的事，而我最近由于学校内的作业已经心烦到没耐心了，可能你很好奇我为啥能够在这种情况下耐着性子弄完这个博客，说实话我也很好奇，不过也无所谓了。总之嘛……我觉得体验主题后如果懒得备份<code>config</code>或者懒得把<code>config</code>改回来，直接删除所有文件然后重新创建也是一个不错的方法（不过不推荐这么做就是了）。</p>
-<p>这么一提还有一件事挺让我印象深刻的，就是搭建博客的那一天的晚上，正好是跨年，当我搭建到凌晨时偶然看到手机屏幕，看着刷满屏的“新年快乐”时，我莫名有种一些担子被放下的感觉，于是我也暂时放下了搭建博客的注意力，也开始向一些朋友发新年快乐，我甚至还发了俩红包出去，想想也挺有趣的不是吗。</p>
-<p>最后一个印象深刻的事情……可能就是宿舍停电的事情了，这个直到次日早晨（实际上是中午）才解决的事情，愣是让我吐槽了学校网络拉跨一晚上。不过不得不说，当我自己拿起那个用于恢复供电的奇怪设备，并且真的靠那玩意儿恢复了宿舍供电时，我心里还是挺自豪的，就像我刚刚说的那样——成功的事值得骄傲，当然啊，也不能过度骄傲。</p>
-<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>算是我水的一篇博客这个，不过能水出一千多字也挺厉害的了。除了新年快乐，我还想说的是：</p>
-<hr>
-<p style="color: #9B33F0">相信，不一定会成功，但不相信，一定会失败</p>
-<p style="color: #9B33F0" align="right">——陈墨（恋爱绮谭 不存在的真相）</p>
-
-<hr>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
       </tags>
   </entry>
 </search>
