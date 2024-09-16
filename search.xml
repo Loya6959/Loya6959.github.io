@@ -3,7 +3,7 @@
   <entry>
     <title>Markdown简单教学</title>
     <url>/2024/01/11/Markdown%E7%AE%80%E5%8D%95%E6%95%99%E5%AD%A6/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>作为一名学习数媒专业的学生，对我来说排版并不算什么难事，但有时我也不想花时间在排版美化上，并且也有很多不是设计类专业的人也需要一个无需过多设计就能达到不错视觉效果，或者说可读性的文档。现在的一个通用解决方式便是Markdown，这个轻量标记语言确实挺好用的，包括这篇博客也是拿它进行攥写的。</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>作为一名学习数媒专业的学生，对我来说排版并不算什么难事，但有时我也不想花时间在排版美化上，并且也有很多不是设计类专业的人也需要一个无需过多设计就能达到不错视觉效果，或者说可读性的文档。现在的一个通用解决方式便是Markdown，这个轻量标记语言确实挺好用，包括这篇博客也是拿它进行攥写的。</p>
 <p>接下来就正式进入内容。</p>
 <h2 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h2><p>Markdown的语法整体是比较简单的，如果不算上LaTex这些高级语法的话，学习md（Markdown的缩写）应该花不了多少时间。所以这里就先介绍一些简单的语法吧。</p>
 <p>针对本博客内语法的展示，除了使用博客本身的渲染效果外，通过截图展示的渲染效果使用的<a href="https://typoraio.cn/">Typora</a>的Github主题。各位在学习或者编写Markdown时也可以用自己喜欢的Markdown编辑器。</p>
