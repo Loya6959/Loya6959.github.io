@@ -36,7 +36,7 @@
 <p>此外，二者还可以指定鼠标悬停到其上后的标题文本，就像这样：</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">试试悬停？</span>](<span class="link">&quot;&quot; &quot;悬停试试！&quot;</span>)</span><br><span class="line">![<span class="string">试试悬停</span>](<span class="link">&quot;&quot; &quot;悬停试试！&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>来看看效果（将鼠标放在其上试试，顺带一提，这里顺带展示了图片丢失时图片语法的情况）：<br><a href="https://" title="悬停试试！">试试悬停？</a><br><img src="/%22%22" alt="试试悬停" title="悬停试试！"></p>
+<p>来看看效果（将鼠标放在其上试试，这里顺带展示了图片丢失时图片语法的情况）：<br><a href="https://" title="悬停试试！">试试悬停？</a><br><img src="/%22%22" alt="试试悬停" title="悬停试试！"></p>
 <p>总结起来，它们的语法模板就是这样的：</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">Text</span>](<span class="link">Link &quot;Title&quot;</span>)</span><br><span class="line">![<span class="string">Text</span>](<span class="link">Link &quot;Title&quot;</span>)</span><br></pre></td></tr></table></figure>
 
@@ -272,9 +272,9 @@ print(&quot;Hello, world!&quot;)
 <p>这个语法简单来说就是在无序列表的基础上，在后面加上了一对<code>[ ]</code>，请注意，<strong>括号内必须有个空格占位</strong>，这样才能表示一个空的多选框。而想表示复选框被选中就换成<code>[x]</code>。<code>[ ]</code>和<code>[x]</code>与<code>-</code>之间也需要用空格隔开，不然这个语法同样不会生效。</p>
 <p>这个语法我在别人的博客倒是有见到过不少次，但我自己基本上只在本地使用，Typora在定义这个后，可以很方便的选中&#x2F;取消选中复选框，因此拿来当作本地的清单还是挺推荐的。</p>
 <h3 id="定义列表"><a href="#定义列表" class="headerlink" title="定义列表"></a>定义列表</h3><p>定义列表一般情况下用来解释一些术语，而在一些md渲染器中也是支持的，语法如下：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">齐兰</span><br><span class="line">: 这就是我！不是什么术语！</span><br><span class="line">: 拿自己做例子还挺好玩的（不是）</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">络亚</span><br><span class="line">: 这就是我！不是什么术语！</span><br><span class="line">: 拿自己做例子还挺好玩的（不是）</span><br></pre></td></tr></table></figure>
 
-<dl><dt>齐兰<br>: 这就是我！不是什么术语！</dt><dd>拿自己做例子还挺好玩的（不是）</dd></dl><p>似乎在我使用的这个博客框架下，定义列表支持的不是很好，正常情况下两条<code>:</code>开头的内容应该都是有缩进的。</p>
+<dl><dt>络亚<br>: 这就是我！不是什么术语！</dt><dd>拿自己做例子还挺好玩的（不是）</dd></dl><p>似乎在我使用的这个博客框架下，定义列表支持的不是很好，正常情况下两条<code>:</code>开头的内容应该都是有缩进的。</p>
 <p>定义列表的使用场景我个人也没怎么见过，不过在国外网站上倒是见过不少次。个人认为这个语法也能在一定程度上使用无序列表替代，不过这也是仁者见仁智者见智的事（虽然我觉着，其实语义化才应该是主流）。</p>
 <h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>算是花了大量的篇幅介绍了md的常用语法，当然，md还有一些语法我还没有介绍到，这个就之后抽时间写了。希望上面的内容能够对各位有所帮助，在学习md时也推荐将代码复制到md编辑器后查看实际效果，这样才能对它的语法有更深入的记忆。</p>
 ]]></content>
