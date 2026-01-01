@@ -404,4 +404,196 @@ print(&quot;Hello, world!&quot;)
         <tag>Markdown</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Python3.14更新！同步带来的崭新Python安装方式如何使用？</title>
+    <url>/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>在Python3.14版本更新后，针对Windows平台，一个新的Python版本管理工具也随着更新一同推出，它就是<code>pymanager</code>，这个版本管理工具同时具备Python安装和版本管理功能，相较于Windows上以往的Python安装、管理方式，<code>pymanager</code>无疑是带来了迟到已久的变革。</p>
+<p>在<a href="https://www.python.org/downloads/release/python-3142/">Python官方网站</a>的3.14版本的发布页面明确提到这样一句话：</p>
+<blockquote>
+<p>The installer we offer for Windows is being replaced by our new install manager, which can be installed from the Windows Store or from its download page. See our documentation for more information. The JSON file available for download contains the list of all the installable packages available as part of this release, including file URLs and hashes, but is not required to install the latest release. The traditional installer will remain available throughout the 3.14 and 3.15 releases.</p>
+</blockquote>
+<p>机翻：</p>
+<blockquote>
+<p>我们为Windows提供的安装程序将被新的安装管理器取代，安装管理器可以从Windows商店或其下载页面安装。更多信息请参见我们的文档。可下载的 JSON 文件包含了本版本中所有可安装的软件包列表，包括文件 URL 和哈希值，但安装最新版本并非必须的。传统安装程序将在3.14和3.15版本中继续使用。</p>
+</blockquote>
+<p>也就是说，在未来，以往通过exe直接安装Python具体版本的安装方式将会完全淘汰，无论是出于哪种情况考虑，开发者都迫切需要学会<code>pymanager</code>的基本使用方式。</p>
+<p>额外说一句，本人对于这个新的管理工具颇有好感，以往的安装方式是图形化的，它的确方便，但这并不利于培养新手开发者使用命令行的习惯，而<code>pymanager</code>的替代个人认为也有这方面的考虑在。废话就说完了，现在我们进入正题。</p>
+<h2 id="安装Pymanager"><a href="#安装Pymanager" class="headerlink" title="安装Pymanager"></a>安装Pymanager</h2><p>在正式介绍安装方法前，我强烈建议你卸载电脑上已有的任何Python安装，并且在此基础上清除Python相关的环境变量，以及删除C:\Windows下的<code>py.exe</code>、<code>pyw.exe</code>两个文件，这一步是可选的，不照做也没有任何影响。</p>
+<p>安装Pymanager的方法非常简单，只需要访问<a href="https://www.python.org/downloads/release/pymanager-252/">Python Release Python install manager 25.2</a>页面就行，翻到页面末尾的表格，点击<strong>MSI package</strong>即可下载安装程序。（Installer (MSIX)其实也可以，它只是会捆绑安装一个Python最新正式版而已，考虑到稍后的内容，我并不推荐下载这个。）</p>
+<p>下载完成并且找到该文件后（一般是叫python-manager-&lt;version&gt;.msi，比如我在写这篇文章时pymanager的最新版本是25.2，所以文件名就是python-manager-25.2.msi），直接双击安装即可。注意，这个安装程序并不能选择安装位置，整个安装过程自动进行且没有可以干预的环节.</p>
+<p><code>pymanager</code>安装程序会在安装时同时向系统变量<code>Path</code>注册自己的位置，也就是说，安装完<code>pymanager</code>后，就可以直接开始使用了。</p>
+<h2 id="配置Pymanager"><a href="#配置Pymanager" class="headerlink" title="配置Pymanager"></a>配置Pymanager</h2><p>在上面，我说安装完成后就能直接使用，这是没错的，但如果你像我一样会将不同的东西进行单独分类，比如将各个编程语言的环境放到专门的文件夹进行管理，那么这个部分就能够帮到你。为此，我们先找到<code>pymanager</code>的安装位置，不出意外的话，它应该是位于C:\Program Files\PyManager目录，不必关心里面的大部分文件，我们重点看<code>pymanager.json</code>。</p>
+<figure class="highlight json"><figcaption><span>pymanager.json</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;install&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;source&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%PYTHON_MANAGER_SOURCE_URL%&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;fallback_source&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./bundled/fallback-index.json&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;default_install_tag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;list&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;format&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%PYTHON_MANAGER_LIST_FORMAT%&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;registry_override_key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HKEY_LOCAL_MACHINE\\Software\\Policies\\Python\\PyManager&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">&quot;confirm&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%PYTHON_MANAGER_CONFIRM%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;automatic_install&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%PYTHON_MANAGER_AUTOMATIC_INSTALL%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;include_unmanaged&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%PYTHON_MANAGER_INCLUDE_UNMANAGED%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;virtual_env&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%VIRTUAL_ENV%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;shebang_can_run_anything&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%PYTHON_MANAGER_SHEBANG_CAN_RUN_ANYTHING%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;shebang_can_run_anything_silently&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">&quot;install_dir&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%LocalAppData%\\Python&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;download_dir&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%LocalAppData%\\Python\\_cache&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;global_dir&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%LocalAppData%\\Python\\bin&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;bundled_dir&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./bundled&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;logs_dir&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%PYTHON_MANAGER_LOGS%&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">&quot;default_tag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%PYTHON_MANAGER_DEFAULT%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;default_platform&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%PYTHON_MANAGER_DEFAULT_PLATFORM%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;user_config&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%AppData%\\Python\\PyManager.json&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;additional_config&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%PYTHON_MANAGER_CONFIG%&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">&quot;pep514_root&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HKEY_CURRENT_USER\\Software\\Python&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;start_folder&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Python&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">&quot;launcher_exe&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./templates/launcher.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;launcherw_exe&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./templates/launcherw.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;welcome_on_update&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个文件是<code>pymanager</code>的配置文件，可以看到，我们能配置的东西还不少，对于我们的需求，需要关注的点是<code>install_dir</code>、<code>download_dir</code>、<code>global_dir</code>以及可选的<code>logs_dir</code>。至于<code>bundled_dir</code>，由于我们一开始就没有选择捆绑安装，所以可以直接将其忽略。</p>
+<p>在我的本地环境中，我是将Python单独放在D:\Python目录统一管理的，由此接下来的部分都会使用这个目录，不过你也可以自己决定安装位置，不必跟着我的方案走。我们先来看看这些键分别代表什么（虽然它们的名字足够直观）：</p>
+<ul>
+<li><strong>install_dir：</strong> 安装目录，也就是实际Python环境安装的目录</li>
+<li><strong>download_dir：</strong> 下载目录，安装过程中存放下载缓存的目录</li>
+<li><strong>global_dir：</strong> 全局目录，也就是直接执行类似<code>python</code>、<code>python3.13</code>命令时，实际可执行文件的存放目录（注意，这个目录在自定义后需要额外在环境变量配置）</li>
+<li><strong>logs_dir：</strong>日志目录……其实我不建议改</li>
+</ul>
+<p>我们把这三行配置单独拿出来看看，然后根据它的风格，将目录替换成我们自己的目录（注意，我们是修改这三个键值对，而不是让配置文件只剩下这三个键值对；此外，修改时一定要保证有管理员权限）：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="attr">&quot;install_dir&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%LocalAppData%\\Python&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;download_dir&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%LocalAppData%\\Python\\_cache&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;global_dir&quot;</span><span class="punctuation">:</span> <span class="string">&quot;%LocalAppData%\\Python\\bin&quot;</span><span class="punctuation">,</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>修改后：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="attr">&quot;install_dir&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:\\Python\\runtimes&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;download_dir&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:\\Python\\_cache&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;global_dir&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:\\Python\\bin&quot;</span><span class="punctuation">,</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>配置完这些，<code>pymanager</code>在安装Python时，就会把文件放在我们配置的目录下了。</p>
+<h2 id="安装、管理、运行Python"><a href="#安装、管理、运行Python" class="headerlink" title="安装、管理、运行Python"></a>安装、管理、运行Python</h2><p>接下来，我们来看看如何安装、管理、运行Python</p>
+<h3 id="安装（install）"><a href="#安装（install）" class="headerlink" title="安装（install）"></a>安装（install）</h3><p>安装Python基本子命令是<code>install</code>，如果在前面按照我说的，在安装<code>pymanager</code>前删除了相关文件，那么你就能直接使用<code>py</code>命令，否则，请使用<code>pymanager</code>命令：</p>
+<figure class="highlight shell"><figcaption><span>安装命令</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注意 &lt;&gt;是必传参数 在实际使用命令时这些参数是必须的</span></span><br><span class="line">py install &lt;verison&gt;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line">pymanager install &lt;version&gt;</span><br></pre></td></tr></table></figure>
+
+<p>比如，要想安装Python3.14：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">py install 3.14</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line">pymanager install 3.14</span><br></pre></td></tr></table></figure>
+
+<p>在安装后，如果有按照上面的小结配置目录，那么查看<code>runtimes</code>目录，你会发现目录下多了一个<code>pythoncore-3.14-64</code>文件夹，其中的目录结构实际上与以往安装时的目录结构是完全一样的。</p>
+<p>Runtimes（这里有三个版本是因为我自己本身就有安装其他版本）:</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/Runtimes.png" alt="Runtimes文件夹"></p>
+<p>pythoncore-3.14-64：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/pythoncore-3.14-64.png" alt="pythoncore-3.14-64文件夹"></p>
+<p>在此基础上，<code>pymanager</code>还提供了<code>--update</code>参数，用来升级已有的Python版本，比如，我在写这篇教程时，Python3.13还停留在3.13.8版本，但最新版本却是3.13.11，我们就可以直接在上面的基础上加上这个参数实现升级：</p>
+<figure class="highlight shell"><figcaption><span>加上升级参数</span></figcaption><table><tr><td class="code"><pre><span class="line">py install --update 3.13</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line">pymanager install --update 3.13</span><br></pre></td></tr></table></figure>
+
+<p>最后，我们都知道从3.13开始，Python软件基金会正在逐步去除全局解释器锁，其发布的Free-threaded通常都是版本后边带t后缀，例如Python3.13t。安装它们也非常简单，只需要在对应的版本后边加上t就行了（以3.14为例）：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">py install 3.14t</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line">pymanager install 3.14t</span><br></pre></td></tr></table></figure>
+
+<p>由于我本地安装时实际速度较快，因此没有去确定各个镜像源是否有发布<code>pymanager</code>的相关源，实际碰到下载速度问题时，还请优先去找到这些源的官方网站，例如本人常用的<a href="https://mirrors.ustc.edu.cn/help/">中科大镜像源</a>在此附上。</p>
+<h3 id="列出（list）和卸载（uninstall）"><a href="#列出（list）和卸载（uninstall）" class="headerlink" title="列出（list）和卸载（uninstall）"></a>列出（list）和卸载（uninstall）</h3><p>每次安装完成后去翻找文件夹确实麻烦，还好<code>pymanager</code>为我们提供了<code>list</code>子命令来列出已安装的版本：</p>
+<figure class="highlight shell"><figcaption><span>列出已安装版本命令</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注意 []是可选参数 也就是说 实际使用时可以不传入相关参数</span></span><br><span class="line">py list [version]</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line">pymanager list [version]</span><br></pre></td></tr></table></figure>
+
+<p>我本地安装的是Python3.12、3.13、3.14三个大版本，列出的结果就是这样的：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/pylist.png" alt="py list命令运行结果"></p>
+<p>还是非常直观的，我们在这里可以很方便的看到已安装版本的架构、名称、版本还有别名。当然，<code>list</code>子命令也可以传入一个具体的版本，来列出对应版本的安装，这里我就不演示了。</p>
+<p>还记得上面我们安装的3.14t版本吗？现在我们假设我们已经体验完了这个“玩具版本”，不想再留下它了，此时我们就需要卸载它对吧？直接删除对应的文件虽然可以，但不建议，因为<code>pymanager</code>还提供了<code>uninstall</code>子命令，它跟<code>install</code>子命令的使用方法相似：</p>
+<figure class="highlight shell"><figcaption><span>卸载命令</span></figcaption><table><tr><td class="code"><pre><span class="line">py uninstall &lt;version&gt;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line">pymanager uninstall &lt;version&gt;</span><br></pre></td></tr></table></figure>
+
+<p>那么要想卸载3.14t，就是这样：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">py uninstall 3.14t</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line">pymanager uninstall 3.14t</span><br></pre></td></tr></table></figure>
+
+<p>执行命令后，会在卸载前询问是否确认，输入y便可，卸载后我们用<code>list</code>检查一下：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/pylist2.png" alt="卸载后重新运行py list命令"></p>
+<p>可以看到，3.14t在卸载后，也从列表中消失了。</p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p><code>py</code>和<code>pymanager</code>命令实际上存在一些差别，但别着急，我们稍后来讨论这个问题。现在，我们来直接运行一下<code>py</code>（或者<code>pymanager exec</code>）命令，不出意外的话，你应该能跟我一样打开熟悉的Python交互式解释器（版本可能不太相同）：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/pyconsole.png" alt="Python Console"></p>
+<p>可以看到，<code>pymanager</code>默认使用最新版本，但如果想使用指定版本，例如3.12，又该怎么办呢？</p>
+<figure class="highlight shell"><figcaption><span>打开指定版本的Python交互式解释器</span></figcaption><table><tr><td class="code"><pre><span class="line">py -V:&lt;version&gt;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line">pymanager exec -V:&lt;version&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>-V:</code>参数（注意大小写，这里是大写）可以指定一个已安装版本，例如上面，我们想运行3.12版本就该这样：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">py -V:3.12</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line">pymanager exec -V:3.12</span><br></pre></td></tr></table></figure>
+
+<p>我们便成功打开了指定版本的Python交互式解释器：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/py3.12_console.png" alt="Python3.12 Console"></p>
+<p>在使用对应解释器的<code>pip</code>、<code>venv</code>等内置命令时，就能在此基础上，像以往直接使用<code>python</code>命令一样使用<code>-m</code>参数：</p>
+<figure class="highlight shell"><figcaption><span>加上-m参数</span></figcaption><table><tr><td class="code"><pre><span class="line">py -m pip ... # 使用默认版本</span><br><span class="line"></span><br><span class="line">py -V:&lt;version&gt; -m pip ...</span><br><span class="line">py -V:&lt;version&gt; -m venv ...</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line"></span><br><span class="line">pymanager exec -m pip ... # 使用默认版本</span><br><span class="line"></span><br><span class="line">pymanager exec -V:&lt;version&gt; -m pip ...</span><br><span class="line">pymanager exec -V:&lt;version&gt; -m venv ...</span><br></pre></td></tr></table></figure>
+
+<p>当然，直接运行脚本也是如此，现在我们<strong>假设</strong>要运行的文件是当前目录下的<code>main.py</code>：</p>
+<figure class="highlight shell"><figcaption><span>直接运行脚本</span></figcaption><table><tr><td class="code"><pre><span class="line">py ./main.py # 使用默认版本</span><br><span class="line">py -V:&lt;version&gt; ./main.py</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line"></span><br><span class="line">pymanager exec ./main.py # 使用默认版本</span><br><span class="line">pymanager exec -V:&lt;version&gt; ./main.py</span><br></pre></td></tr></table></figure>
+
+<p>注意，如果你以前习惯使用<code>py -3.13</code>这样的参数风格，可能需要习惯一段时间，这里只需要记住：在原来的基础上加上<code>V:</code>即可，例如这里就是<code>py -V:3.13</code>。</p>
+<h2 id="运行Python"><a href="#运行Python" class="headerlink" title="运行Python"></a>运行Python</h2><p>上面我们已经介绍了如何<a href="#%E8%BF%90%E8%A1%8C">运行Python</a>，你可能会问：为什么这里还要单独列出一个<strong>运行Python</strong>的章节呢？实际上，运行Python的内容远不止上面提到的，我们接下来要介绍的内容，就是有关脚本文件的运行。</p>
+<h3 id="设置文件的默认打开方式"><a href="#设置文件的默认打开方式" class="headerlink" title="设置文件的默认打开方式"></a>设置文件的默认打开方式</h3><p>在上面，我们都是基于命令行执行的操作，但也许大部分人在Windows上都更习惯直接双击运行某个Python文件，那么我们先来解决双击运行的问题，随便在什么地方创建两个Python脚本文件，分别以<code>.py</code>、<code>.pyw</code>作为拓展名（里面可以什么都没有，重点是设置打开方式）：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/pyfile.png" alt="Python文件"></p>
+<p>由于我在很久之前就已经设置好了打开方式，因此这里<code>.py</code>文件的图标是正常的，但<code>.pyw</code>文件图标是缺失的，第一次安装Python的情况下，缺失图标才是正常现象，我们来分别设置一下打开方式，先来右键<code>.py</code>文件，点击“打开方式&gt;选择其他应用”：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/setopenapp_1.png" alt="设置打开方式"></p>
+<p>在新的窗口，滚到最下面，点击“在电脑上选择应用”：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/setopenapp_2.png" alt="选择应用程序"></p>
+<p>接着，找到<code>pymanager</code>的安装位置，我们之前提到过的（C:\Program Files\PyManager），这里的重点是选择<code>python.exe</code>文件：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/openfile.png" alt="打开文件"></p>
+<p>最后，点击“始终”：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/Yes_1.png" alt="确认设置"></p>
+<p>如法炮制，我们来设置<code>.pyw</code>的打开方式，步骤基本不变，但在选择应用程序的步骤，我们这次选择<code>pythonw.exe</code>文件：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/openfile_w.png" alt="打开文件"></p>
+<p>同样点击“始终”后，你的文件图标大概就变得跟我一样了：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/pyfile_over.png" alt="设置完成"></p>
+<p>图标没变的话也不需要担心，因为我们要检查的重点是文件是否真的是以我们指定的方式打开的，为此不妨将这段代码放到文件里，然后直接双击打开看看（该代码来自于<a href="https://docs.python.org/zh-cn/3/library/tkinter.html#a-hello-world-program">Python官方文档 - tkinter</a>）：</p>
+<figure class="highlight python"><figcaption><span>Tkinter版Hello_World</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> ttk</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root = Tk()</span><br><span class="line">frm = ttk.Frame(root, padding=<span class="number">10</span>)</span><br><span class="line">frm.grid()</span><br><span class="line">ttk.Label(frm, text=<span class="string">&quot;Hello World!&quot;</span>).grid(column=<span class="number">0</span>, row=<span class="number">0</span>)</span><br><span class="line">ttk.Button(frm, text=<span class="string">&quot;Quit&quot;</span>, command=root.destroy).grid(column=<span class="number">1</span>, row=<span class="number">0</span>)</span><br><span class="line">root.mainloop()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>我的本地环境是将终端设置为了半透明模式的，此前展示的控制台实际上是VSCode自己的控制台，因此不要担心打开的“黑窗口”跟我不一样，我们要查看的重点是那个小窗口，下面是双击<code>.py</code>和<code>.pyw</code>文件后，二者的实际效果：</p>
+<p>run.py：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/window_nw.png" alt="run.py运行结果"></p>
+<p>run.pyw</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/window_w.png" alt="run.pyw运行结果"></p>
+<p>如果双击文件后直接就显示了窗口，说明你成功了。</p>
+<h3 id="在脚本中指定Python版本"><a href="#在脚本中指定Python版本" class="headerlink" title="在脚本中指定Python版本"></a>在脚本中指定Python版本</h3><p>在上面，我们都是通过<code>-V:&lt;version&gt;</code>参数来指定运行版本的，但这样做未免有些麻烦，正式讲解内容前，请随便创建一个新的Python文件（我们是要通过控制台输出，从而验证版本，所以请使用<code>.py</code>拓展名），将以下代码复制到你的文件中：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#! </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> version</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(version)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>做完这一步，我们就可以来了解一下<code>Shebang</code>行了，我们来看看<a href="https://docs.python.org/zh-cn/3.15/using/windows.html#shebang-lines">官方文档</a>中的描述：</p>
+<blockquote>
+<p>如果脚本文件的第一行以 <code>#!</code> 开头，则称为 “shebang” 行。Linux 和其他类 Unix 操作系统对这类行有原生支持，通常用于指示脚本的执行方式。 <code>python</code> 和 <code>py</code> 命令允许在 Windows 上的 Python 脚本中使用相同的功能。</p>
+</blockquote>
+<p>这时我们便能明了PyManager目录下<code>pymanager</code>、<code>py</code>和<code>python</code>三个可执行文件分别是用来干什么的了（当然，这也包括对应的<code>pywmanager</code>、<code>pyw</code>和<code>pythonw</code>三个隐藏控制台的版本）</p>
+<ul>
+<li><strong>pymanager &amp; pywmanager：</strong> 专门用来管理Python环境的安装、卸载</li>
+<li><strong>py &amp; pyw：</strong> 除了拥有pymanager的所有功能，还能直接根据参数、Shebang行自动选择合适的Python版本</li>
+<li><strong>python &amp; pythonw：</strong> 跟<code>py</code>命令一样，不过这个命令通常会被实际的默认版本的Python Alias覆盖，因此通常不会用它</li>
+</ul>
+<p>也许刚刚你就在好奇，为什么唯独<strong>运行</strong>小结会单独在<code>pymanager</code>命令后边额外使用<code>exec</code>子命令，实际上就是因为<code>pymanager</code>并不能直接执行脚本。在<code>py</code>命令存在冲突，不得不使用<code>pymanager</code>时，还请注意这一点。</p>
+<p>说回Shebang行，也许你已经注意到，上面的源码中存在一个空的Shebang行，这就是我们接下来要修改的地方了，不过我们先来看看实际支持的所谓“虚拟”命令：</p>
+<ul>
+<li><code>/usr/bin/env &lt;ALIAS&gt;</code></li>
+<li><code>/usr/bin/env -S &lt;ALIAS&gt;</code></li>
+<li><code>/usr/bin/&lt;ALIAS&gt;</code></li>
+<li><code>/usr/local/bin/&lt;ALIAS&gt;</code></li>
+<li><code>&lt;ALIAS&gt;</code></li>
+</ul>
+<p>除了最后的<code>python</code>，剩下三个我想长期使用Linux的用户已经觉得眼熟了，这是正常的，<a href="https://docs.python.org/zh-cn/3.15/using/windows.html#shebang-lines">因为</a>：</p>
+<blockquote>
+<p>为了允许Python脚本中的shebang行在Unix和Windows之间移植，该启动器支持许多“虚拟”命令来指定要使用的解释器。</p>
+</blockquote>
+<p>还挺周到不是吗？那我们来实际试试：让上面的代码以3.13版本运行，预期的打印应当是类似于这个输出：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">3.13.11 (tags/v3.13.11:6278944, Dec  5 2025, 16:26:58) [MSC v.1944 64 bit (AMD64)]</span><br></pre></td></tr></table></figure>
+
+<p>将刚刚代码的空Shebang行改成这样：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#! /usr/bin/python3.13</span></span><br></pre></td></tr></table></figure>
+
+<p>然后运行：</p>
+<p><img src="/2026/01/01/pymanager%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/run1.png" alt="运行结果"></p>
+<p>输出果然符合预期，注意，如果你不知道<code>&lt;ALIAS&gt;</code>具体替换成什么，请直接通过<code>py list</code>命令查看Alias列（实际写的时候像我上面那样忽略掉拓展名和[x64]）。</p>
+<p>有关<code>env</code>系列的虚拟命令，由于我没怎么接触过Linux开发，就只能贴上<a href="https://docs.python.org/zh-cn/3.15/using/windows.html#shebang-lines">官方文档</a>的描述了：</p>
+<blockquote>
+<p>使用 <code>/usr/bin/env</code> 形式的 shebang 行也会在 <code>PATH</code> 环境变量中搜索未识别的命令。这与 Unix 的<code>env</code>程序的行为相对应，该程序执行相同的搜索，但优先启动已知的 Python 命令。在搜索任意可执行文件时可能会显示警告，并且可以通过 <code>shebang_can_run_anything</code> 配置选项禁用此搜索。</p>
+</blockquote>
+<h3 id="以指定的虚拟环境运行脚本"><a href="#以指定的虚拟环境运行脚本" class="headerlink" title="以指定的虚拟环境运行脚本"></a>以指定的虚拟环境运行脚本</h3><p>在旧的py命令下，实际上可以直接指定虚拟环境的python可执行文件位置，来让脚本以对应的虚拟环境运行，但<code>pymanager</code>并不能直接指定，其中可能的一个原因，估计就是它跟以前一样，会优先选择已经激活的虚拟环境运行脚本。</p>
+<p>我们来验证这一点，为此，请用你熟悉的虚拟环境创建工具来创建新的虚拟环境，以3.12版本为例，我个人通常用<code>venv</code>（这里就不罗列对应的<code>pymanager</code>命令了）：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">py -V:3.12 -m venv env</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">然后激活虚拟环境</span></span><br><span class="line">.\env\Scripts\activate</span><br></pre></td></tr></table></figure>
+
+<p>创建一个新的Python文件（同样是<code>.py</code>），将以下代码直接复制到文件中：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> executable</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(executable)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>然后，去掉Shebang行，直接执行之前创建好的Python文件，上面的代码会打印出当前所使用解释器的路径，如果激活了虚拟环境，它应该是打印虚拟环境的解释器路径，没有的话，它就是打印默认使用的（或者你指定的）Python版本对应的全局安装路径。</p>
+<p>注意，Shebang行、虚拟环境（下面简写为ENV）和<code>-V:&lt;version&gt;</code>（下面简写为<code>-V</code>）存在如下的优先级关系：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">-V &gt; Shebang &gt; ENV</span><br></pre></td></tr></table></figure>
+
+<p>也就是说，直接指定的Python版本优先于Shebang行指定的版本，Shebang行指定的版本优先于当前已经激活的虚拟环境，在实际运行脚本时，一定要特别注意这一点。</p>
+<p>实际上，在<a href="https://docs.python.org/zh-cn/3.15/using/windows.html#shebang-lines">官方文档</a>中存在这样的描述：</p>
+<blockquote>
+<p>不符合上述任何模式的 shebang 行将被视为相对于脚本文件所在目录的 Windows 可执行文件路径（绝对或相对路径）。这为仅限 Windows 的脚本（如安装程序生成的脚本）提供了便利，因为这种行为与 Unix 风格的 shell 不兼容。这些路径可以加引号，并且可以包含多个参数，之后会追加脚本路径和任何额外的参数。此功能可以通过 <code>shebang_can_run_anything</code> 配置选项禁用。</p>
+</blockquote>
+<p>看起来Shebang行至少在设计上应该是支持类似<code>./env/Scripts/python.exe</code>的写法的，但我在实际测试发现并不可行，在没有匹配之前提到的“虚拟命令”，且当前没有激活虚拟环境时，<code>py</code>似乎会选择全局默认版本来运行脚本，尚不确定这是什么情况。</p>
+<h2 id="留到最后"><a href="#留到最后" class="headerlink" title="留到最后"></a>留到最后</h2><p>由于这篇博客只是为了简单介绍<code>pymanager</code>的使用方法，其内容定然没有官方文档来的详细，链接我似乎在这篇博客里提到了多次，还请原谅我在这里最后一次贴出官方文档的链接，更多内容还请移步到这里：<a href="https://docs.python.org/zh-cn/3.15/using/windows.html#python-install-manager">Python 安装管理器</a>。</p>
+<p>同时，这里也呼吁各位在有能力的情况下，为Python做出一点贡献，最近一段时间，Python官方网站设置了一个横幅，那个是捐赠的入口，额……自打Python的核心开发者们被微软辞退后，基金会的现状似乎也不容乐观呢……</p>
+<blockquote>
+<p>Banners are cringe,<br>but so is unfunded software development and security 😅<br>Please keep reading:</p>
+<p>As the Python Software Foundation (PSF) closes out 2025, we humbly ask you to reflect on how Python has impacted your life, what value it provided you, and whether you’re able to give $10 back. The PSF is the charity supporting the Python community and protecting the Python programming language, ensuring it stays free, forever, for everyone.</p>
+<p>If Python has provided at least $10 of value to you in the past year, please help by donating now–your support really makes all the difference. Thank you for your time and generosity!</p>
+</blockquote>
+<p>机翻：</p>
+<blockquote>
+<p>横幅真让人尴尬，<br>但无资金的软件开发和安全😅同样重要，<br>请继续阅读：</p>
+<p>随着Python软件基金会（PSF）即将结束2025年，我们谦逊地邀请您反思Python如何影响了您的生活，它为您带来了哪些价值，以及您是否能够回馈10美元。PSF是支持Python社区、保护Python编程语言的慈善机构，确保它永远免费，惠及所有人。</p>
+<p>如果过去一年Python至少为你提供了10美元的价值，请现在就捐款——你的支持真的能带来巨大改变。感谢您的时间和慷慨！</p>
+</blockquote>
+<p>在此，我也呼吁看到这里的朋友能在自己经济能力允许的情况下，支持一下Python软件基金会，正如横幅所说的，我们的支持真的能带来巨大的改变（）</p>
+<p>最后，非常感谢能看到这里，一如既往的希望我的内容能帮到阅读我博客的你~</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Python</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
 </search>
